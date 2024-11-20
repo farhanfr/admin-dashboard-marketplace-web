@@ -1,9 +1,14 @@
+import { IconMenuOrder, IconMessage, IconPackages, IconShoppingCart } from "@tabler/icons-react";
 import {
   IconAperture,
+  IconBox,
+  IconBoxMultiple,
+  IconBoxSeam,
   IconCopy,
   IconLayoutDashboard,
   IconLogin,
   IconMoodHappy,
+  IconPackage,
   IconTypography,
   IconUserPlus,
 } from "@tabler/icons-react";
@@ -11,11 +16,10 @@ import {
 import { uniqueId } from "lodash";
 
 const Menuitems = [
-  {
+   {
     navlabel: true,
-    subheader: "Home",
+    subheader: "Dashboard Tenant",
   },
-
   {
     id: uniqueId(),
     title: "Dashboard",
@@ -24,52 +28,98 @@ const Menuitems = [
   },
   {
     navlabel: true,
-    subheader: "Utilities",
+    subheader: "Kelola Produk",
   },
   {
     id: uniqueId(),
-    title: "Typography",
-    icon: IconTypography,
-    href: "/utilities/typography",
+    title: "Produk",
+    icon: IconBox,
+    href: "/a",
   },
   {
     id: uniqueId(),
-    title: "Shadow",
-    icon: IconCopy,
-    href: "/utilities/shadow",
+    title: "Persediaan Produk",
+    icon: IconPackages,
+    href: "/s",
   },
   {
     navlabel: true,
-    subheader: "Auth",
+    subheader: "Kelola Pesanan",
   },
   {
     id: uniqueId(),
-    title: "Login",
-    icon: IconLogin,
-    href: "/authentication/login",
-  },
-  {
-    id: uniqueId(),
-    title: "Register",
-    icon: IconUserPlus,
-    href: "/authentication/register",
+    title: "Pesanan",
+    icon: IconShoppingCart,
+    href: "/d",
   },
   {
     navlabel: true,
-    subheader: "Extra",
+    subheader: "Utilitas",
   },
   {
     id: uniqueId(),
-    title: "Icons",
-    icon: IconMoodHappy,
-    href: "/icons",
+    title: "Percakapan",
+    icon: IconMessage,
+    href: "/d",
   },
-  {
-    id: uniqueId(),
-    title: "Sample Page",
-    icon: IconAperture,
-    href: "/sample-page",
-  },
+  // {
+  //   navlabel: true,
+  //   subheader: "Home",
+  // },
+  // {
+  //   id: uniqueId(),
+  //   title: "Dashboard",
+  //   icon: IconLayoutDashboard,
+  //   href: "/",
+  // },
+  // {
+  //   navlabel: true,
+  //   subheader: "Utilities",
+  // },
+  // {
+  //   id: uniqueId(),
+  //   title: "Typography",
+  //   icon: IconTypography,
+  //   href: "/utilities/typography",
+  // },
+  // {
+  //   id: uniqueId(),
+  //   title: "Shadow",
+  //   icon: IconCopy,
+  //   href: "/utilities/shadow",
+  // },
+  // {
+  //   navlabel: true,
+  //   subheader: "Auth",
+  // },
+  // {
+  //   id: uniqueId(),
+  //   title: "Login",
+  //   icon: IconLogin,
+  //   href: "/authentication/login",
+  // },
+  // {
+  //   id: uniqueId(),
+  //   title: "Register",
+  //   icon: IconUserPlus,
+  //   href: "/authentication/register",
+  // },
+  // {
+  //   navlabel: true,
+  //   subheader: "Extra",
+  // },
+  // {
+  //   id: uniqueId(),
+  //   title: "Icons",
+  //   icon: IconMoodHappy,
+  //   href: "/icons",
+  // },
+  // {
+  //   id: uniqueId(),
+  //   title: "Sample Page",
+  //   icon: IconAperture,
+  //   href: "/sample-page",
+  // },
 ];
 
 export default Menuitems;

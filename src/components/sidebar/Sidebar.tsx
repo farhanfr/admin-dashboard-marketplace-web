@@ -1,4 +1,4 @@
-import { useMediaQuery, Box, Drawer } from "@mui/material";
+import { useMediaQuery, Box, Drawer, Typography } from "@mui/material";
 import SidebarItems from "./SidebarItems";
 import { Upgrade } from "./Updrade";
 import { Sidebar, Logo } from 'react-mui-sidebar';
@@ -72,7 +72,9 @@ const MSidebar = ({
               {/* ------------------------------------------- */}
               {/* Logo */}
               {/* ------------------------------------------- */}
-              <Logo img="/images/logos/dark-logo.svg" />
+              <Box p={2}>
+              <Typography align="center" variant="h5">Marketplace Seller</Typography>
+              </Box>
               <Box>
                 {/* ------------------------------------------- */}
                 {/* Sidebar Items */}
