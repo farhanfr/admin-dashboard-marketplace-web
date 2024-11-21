@@ -9,6 +9,7 @@ const MainWrapper = styled("div")(() => ({
   display: "flex",
   minHeight: "100vh",
   width: "100%",
+  background:'#F4F3F9'
 }));
 
 const PageWrapper = styled("div")(() => ({

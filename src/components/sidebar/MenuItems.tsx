@@ -34,7 +34,7 @@ const Menuitems = [
     id: uniqueId(),
     title: "Produk",
     icon: IconBox,
-    href: "/a",
+    href: "/product",
   },
   {
     id: uniqueId(),
