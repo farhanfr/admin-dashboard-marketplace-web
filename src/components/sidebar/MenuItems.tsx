@@ -50,7 +50,7 @@ const Menuitems = [
     id: uniqueId(),
     title: "Pesanan",
     icon: IconShoppingCart,
-    href: "/d",
+    href: "/order",
   },
   {
     navlabel: true,
