@@ -10,6 +10,16 @@ export const plus = Plus_Jakarta_Sans({
 
 const baselightTheme = createTheme({
   direction: "ltr",
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 960,
+      lg: 1280,
+      xl: 1920,
+      xxl: 2000 //3xDekstop
+    } as any,
+  },
   palette: {
     primary: {
       main: "#5D87FF",

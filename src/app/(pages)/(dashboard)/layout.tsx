@@ -55,20 +55,20 @@ export default function RootLayout({
         {/* ------------------------------------------- */}
         {/* PageContent */}
         {/* ------------------------------------------- */}
-        <Container
+        {/* <Container
           sx={{
             paddingTop: "20px",
             maxWidth: "1200px",
           }}
-        >
+        > */}
           {/* ------------------------------------------- */}
           {/* Page Route */}
           {/* ------------------------------------------- */}
-          <Box sx={{ minHeight: "calc(100vh - 170px)" }}>{children}</Box>
+          <Box py={3} px={3} sx={{ minHeight: "calc(100vh - 170px)" }}>{children}</Box>
           {/* ------------------------------------------- */}
           {/* End Page */}
           {/* ------------------------------------------- */}
-        </Container>
+        {/* </Container> */}
       </PageWrapper>
     </MainWrapper>
   );

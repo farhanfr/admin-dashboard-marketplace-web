@@ -96,7 +96,11 @@ const ListProduct = () => {
   return (
     <PageContainer title="Daftar Produk" description="Daftar Produk">
       <BlankCard>
-        <Paper sx={{ width: '100%' }}>
+        <Box sx={{ width: "100%", display: "table", tableLayout: "fixed" }}>
+          <Box p={5} sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+            <Typography variant='h3'>Daftar Produk</Typography>
+            <Button variant='contained'>Tambah Produk</Button>
+          </Box>
           <DataGrid
             rows={rows}
             columns={columns}
@@ -107,7 +111,7 @@ const ListProduct = () => {
             rowHeight={150}
             sx={{ border: 0, '& .MuiDataGrid-cell': { borderColor: 'silver', fontSize: '14px', fontWeight: '500' }, '& .MuiDataGrid-columnHeaderTitle': { fontWeight: 'bold', fontSize: '14px' } }}
           />
-        </Paper>
+        </Box>
       </BlankCard>
     </PageContainer>
   )
