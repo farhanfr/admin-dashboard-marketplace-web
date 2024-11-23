@@ -5,12 +5,13 @@ type Props = {
   children: JSX.Element | JSX.Element[];
   padding?: number
   paddingY?:number
+  paddingX?:number
 };
 
-const BlankCard = ({ children, className, padding, paddingY }: Props) => {
+const BlankCard = ({ children, className, padding, paddingY, paddingX }: Props) => {
   return (
     <Card
-      sx={{ p: padding ?? 0, paddingY: paddingY ?? 0, position: "relative" }}
+      sx={{ p: padding ?? 0, paddingY: paddingY ?? 0,paddingX: paddingX ?? 0, position: "relative" }}
       className={className}
       elevation={9}
       variant={undefined}

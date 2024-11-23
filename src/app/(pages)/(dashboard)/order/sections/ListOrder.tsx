@@ -22,40 +22,6 @@ const ListOrder = () => {
         { field: 'delivery', headerName: 'Pengiriman', width: 150 },
         { field: 'created_at', headerName: 'Dibuat Tanggal', width: 150 },
         { field: 'invoice_status', headerName: 'Status Pesanan', width: 250 },
-        // {
-        //   field: 'Aksi', headerName: 'Aksi', width: 200,
-        //   renderCell: (params) => (
-        //     <div>
-        //       <strong>
-        //         <Button
-        //           variant="contained"
-        //           color="info"
-        //           size="small"
-        //           style={{ marginLeft: 16 }}
-        //           onClick={() => {
-
-        //           }}
-        //         >
-        //           {/* {params.row.invoice_status} */}
-        //           Ubah
-        //         </Button>
-        //       </strong>
-        //       <strong>
-        //         <Button
-        //           variant="contained"
-        //           color="error"
-        //           size="small"
-        //           style={{ marginLeft: 16 }}
-        //           onClick={() => {
-
-        //           }}
-        //         >
-        //           Hapus
-        //         </Button>
-        //       </strong>
-        //     </div>
-        //   )
-        // },
     ];
 
     const rows = [

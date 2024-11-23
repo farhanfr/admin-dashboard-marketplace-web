@@ -40,7 +40,7 @@ const Menuitems = [
     id: uniqueId(),
     title: "Persediaan Produk",
     icon: IconPackages,
-    href: "/s",
+    href: "/inventory",
   },
   {
     navlabel: true,
