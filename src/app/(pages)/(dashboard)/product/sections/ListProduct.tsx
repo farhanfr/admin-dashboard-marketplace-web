@@ -95,12 +95,12 @@ const ListProduct = () => {
 
   return (
     <PageContainer title="Daftar Produk" description="Daftar Produk">
-      <BlankCard>
-        <Box sx={{ width: "100%", display: "table", tableLayout: "fixed" }}>
-          <Box p={5} sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+        <Box py={3} sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
             <Typography variant='h3'>Daftar Produk</Typography>
             <Button variant='contained'>Tambah Produk</Button>
           </Box>
+      <BlankCard>
+        <Box sx={{ width: "100%", display: "table", tableLayout: "fixed" }}>
           <DataGrid
             rows={rows}
             columns={columns}

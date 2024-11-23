@@ -9,9 +9,11 @@ import {
   MenuItem,
   ListItemIcon,
   ListItemText,
+  Typography,
 } from "@mui/material";
 
 import { IconListCheck, IconMail, IconUser } from "@tabler/icons-react";
+import { CaretDown } from "react-bootstrap-icons";
 
 const Profile = () => {
   const [anchorEl2, setAnchorEl2] = useState(null);
@@ -30,6 +32,7 @@ const Profile = () => {
         color="inherit"
         aria-controls="msgs-menu"
         aria-haspopup="true"
+        disableRipple
         sx={{
           ...(typeof anchorEl2 === "object" && {
             color: "primary.main",
@@ -37,6 +40,7 @@ const Profile = () => {
         }}
         onClick={handleClick2}
       >
+        <Box sx={{ display: "flex", alignItems: "center",gap:1 }}>
         <Avatar
           src="/images/profile/user-1.jpg"
           alt="image"
@@ -45,6 +49,8 @@ const Profile = () => {
             height: 35,
           }}
         />
+        <Typography variant="body1" color={'black'}>Testing Account</Typography>
+        </Box>
       </IconButton>
       {/* ------------------------------------------- */}
       {/* Message Dropdown */}

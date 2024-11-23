@@ -1,8 +1,11 @@
 import React from 'react'
+import ListOrder from './sections/ListOrder'
 
 const OrderPage = () => {
   return (
-    <div>OrderPage</div>
+    <>
+      <ListOrder/>
+    </>
   )
 }
 
