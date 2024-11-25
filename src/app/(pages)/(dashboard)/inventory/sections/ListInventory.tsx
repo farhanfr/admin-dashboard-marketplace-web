@@ -12,6 +12,8 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { DataGrid, GridColDef } from '@mui/x-data-grid'
+import { IconPlus, IconTrash } from '@tabler/icons-react'
+import AddStockDialog from '../components/AddStockDialog'
 
 const ListInventory = () => {
 
@@ -28,19 +30,20 @@ const ListInventory = () => {
 
   const columns: GridColDef[] = [
     { field: 'id', headerName: 'No',width:70 },
-    { field: 'invoice_number', headerName: 'Nama Produk',flex: 1 },
-    { field: 'buyer_name', headerName: 'Stok',flex: 1 },
-    { field: 'qty', headerName: 'Status',flex: 1 },
-    { field: 'grand_total', headerName: 'Catatan',flex: 1 },
-    { field: 'delivery', headerName: 'Dibuat Pada',flex: 1 },
+    { field: 'invoice_number', headerName: 'Nama Produk',width:300 },
+    { field: 'buyer_name', headerName: 'Stok',width:200 },
+    { field: 'qty', headerName: 'Status',width:200 },
+    { field: 'grand_total', headerName: 'Catatan',width:200 },
+    { field: 'delivery', headerName: 'Dibuat Pada',width:200 },
     {
-      field: 'action', headerName: 'Aksi',flex: 1,
+      field: 'action', headerName: 'Aksi',width:200,
       renderCell: (params) => (
         <div>
           <strong>
             <Button
               variant="contained"
               color="error"
+              startIcon={<IconTrash />}
               size="small"
               style={{ marginLeft: 16 }}
               onClick={() => {
@@ -134,6 +137,8 @@ const paginationModel = { page: 0, pageSize: 5 };
               '& .MuiDataGrid-cell': { border:1,borderColor: '#EDEDED', fontSize: '14px', fontWeight: '500' }, '& .MuiDataGrid-columnHeaderTitle': { fontWeight: 'bold', fontSize: '14px' } }}
           />
         </Box>
+        <Box sx={{height:'30px'}}></Box>
+        <AddStockDialog/>
       </BlankCard>
     </PageContainer>
   )
