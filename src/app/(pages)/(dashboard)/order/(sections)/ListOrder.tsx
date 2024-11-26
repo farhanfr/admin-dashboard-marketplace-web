@@ -8,9 +8,11 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { Cancel, CancelOutlined, ConfirmationNumber, Menu } from '@mui/icons-material';
 import { IconBox, IconCar, IconCheck, IconClock, IconClockExclamation, IconProgress, IconProgressCheck, IconTruckDelivery } from '@tabler/icons-react';
+import { useRouter } from 'next/navigation';
 
 const ListOrder = () => {
 
+    const router = useRouter();
     const [value, setValue] = useState(0);
 
     const columns: GridColDef[] = [
@@ -33,6 +35,14 @@ const ListOrder = () => {
 
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
+    };
+
+    const handleRowClick = (
+        params: any, // GridRowParams
+        event: any, // MuiEvent<React.MouseEvent<HTMLElement>>
+        details: any, // GridCallbackDetails
+    ) => {
+        router.push(`/order/${params.row.id}`);
     };
 
     return (
@@ -63,10 +73,20 @@ const ListOrder = () => {
                         columns={columns}
                         initialState={{ pagination: { paginationModel } }}
                         pageSizeOptions={[5, 10]}
-                        checkboxSelection
-                        disableRowSelectionOnClick
                         rowHeight={150}
-                        sx={{ border: 0, '& .MuiDataGrid-cell': { borderColor: 'silver', fontSize: '14px', fontWeight: '500' }, '& .MuiDataGrid-columnHeaderTitle': { fontWeight: 'bold', fontSize: '14px' } }}
+                        disableRowSelectionOnClick
+                        className='rowClick'
+                        onRowClick={handleRowClick}
+                        sx={{
+                            border: 0, '& .MuiDataGrid-cell': { borderColor: 'silver', fontSize: '14px', fontWeight: '500' }, '& .MuiDataGrid-columnHeaderTitle': { fontWeight: 'bold', fontSize: '14px' }, // disable cell selection style
+                            '.MuiDataGrid-cell:focus': {
+                                outline: 'none'
+                            },
+                            // pointer cursor on ALL rows
+                            '& .MuiDataGrid-row:hover': {
+                                cursor: 'pointer'
+                            }
+                        }}
                     />
                 </Box>
             </BlankCard>

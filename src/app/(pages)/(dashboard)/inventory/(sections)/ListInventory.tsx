@@ -13,7 +13,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { DataGrid, GridColDef } from '@mui/x-data-grid'
 import { IconPlus, IconTrash } from '@tabler/icons-react'
-import AddStockDialog from '../components/AddStockDialog'
+import AddStockDialog from '../(components)/AddStockDialog'
 
 const ListInventory = () => {
 

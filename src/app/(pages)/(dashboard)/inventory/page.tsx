@@ -1,5 +1,5 @@
 import React from 'react'
-import ListInventory from './sections/ListInventory'
+import ListInventory from './(sections)/ListInventory'
 
 const InventoryPage = () => {
   return (

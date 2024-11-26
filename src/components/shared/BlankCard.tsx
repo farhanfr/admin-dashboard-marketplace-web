@@ -11,7 +11,7 @@ type Props = {
 const BlankCard = ({ children, className, padding, paddingY, paddingX }: Props) => {
   return (
     <Card
-      sx={{ p: padding ?? 0, paddingY: paddingY ?? 0,paddingX: paddingX ?? 0, position: "relative" }}
+      sx={{width:'100%', p: padding ?? 0, paddingY: paddingY ?? 0,paddingX: paddingX ?? 0, position: "relative" }}
       className={className}
       elevation={9}
       variant={undefined}

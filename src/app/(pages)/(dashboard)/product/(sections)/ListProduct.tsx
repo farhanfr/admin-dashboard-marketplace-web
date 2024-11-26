@@ -5,9 +5,13 @@ import BlankCard from '@/components/shared/BlankCard';
 import DashboardCard from '@/components/shared/DashboardCard'
 import { Box, Button, Paper, Typography } from '@mui/material'
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
+import { IconEye, IconPencil, IconTrash } from '@tabler/icons-react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 const ListProduct = () => {
+
+  const router = useRouter()
 
   const columns: GridColDef[] = [
     { field: 'id', headerName: 'No', width: 70 },
@@ -35,17 +39,32 @@ const ListProduct = () => {
     { field: 'variant_product', headerName: 'Produk Variasi', width: 150 },
     { field: 'created_at', headerName: 'Dibuat tanggal', width: 150 },
     {
-      field: 'action', headerName: 'Aksi', width: 200,
+      field: 'action', headerName: 'Aksi', width: 350,
       renderCell: (params) => (
         <div>
           <strong>
             <Button
               variant="contained"
+              color="primary"
+              size="small"
+              startIcon={<IconEye />}
+              // style={{ marginLeft: 16 }}
+              onClick={() => {
+                router.push(`/product/${params.row.id}`)
+              }}
+            >
+              Lihat Produk
+            </Button>
+          </strong>
+          <strong>
+            <Button
+              variant="contained"
               color="info"
               size="small"
+              startIcon={<IconPencil />}
               style={{ marginLeft: 16 }}
               onClick={() => {
-
+               
               }}
             >
               Ubah
@@ -56,6 +75,7 @@ const ListProduct = () => {
               variant="contained"
               color="error"
               size="small"
+              startIcon={<IconTrash />}
               style={{ marginLeft: 16 }}
               onClick={() => {
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import ListProduct from './sections/ListProduct'
+import ListProduct from './(sections)/ListProduct'
 
 const ProductPage = () => {
   return (
