@@ -3,6 +3,7 @@ import BlankCard from '@/components/shared/BlankCard'
 import { Box, Button, Typography } from '@mui/material'
 import React from 'react'
 import ProductCarousel from '../(components)/ProductCarousel'
+import InformationDetailProduct from '../(components)/InformationDetailProduct'
 
 const InformationProduct = () => {
     return (
@@ -12,14 +13,15 @@ const InformationProduct = () => {
             </Box>
             <BlankCard>
                 <Box p={3} display={'flex'} flexDirection={'row'} justifyContent={'space-between'} >
-                    <Box flex={2}>
-                    <ProductCarousel />
+                    <Box flex={3}>
+                        <ProductCarousel />
                     </Box>
+                    <Box px={2}></Box>
                     <Box flex={5}>
-                        <h3>Nama Produk</h3>
+                        <InformationDetailProduct/>
                     </Box>
                 </Box>
-                
+
             </BlankCard>
         </>
     )

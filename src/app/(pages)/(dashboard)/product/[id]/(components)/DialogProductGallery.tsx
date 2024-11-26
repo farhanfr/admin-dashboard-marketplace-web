@@ -12,6 +12,7 @@ import Image from 'next/image';
 
 export default function ProductGalleryDialog() {
     const [open, setOpen] = React.useState(false);
+    const [previewImg, setPreviewImg] = React.useState('https://api-mojosadean.rodiginesia.com/product/PRDCT_IMGS_9wf95xs7_0_30_2024_.jpg');
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -22,8 +23,8 @@ export default function ProductGalleryDialog() {
     };
 
     const images = [
-        'https://api-mojosadean.rodiginesia.com/product/PRDCT_IMGS_aip6zip4_0_29_2024_.jpg',
-        'https://api-mojosadean.rodiginesia.com/product/PRDCT_IMGS_3oimyrz6_0_29_2024_.webp'
+        'https://api-mojosadean.rodiginesia.com/product/PRDCT_IMGS_krwl6ya6_0_30_2024_.jpg',
+        'https://api-mojosadean.rodiginesia.com/product/PRDCT_IMGS_9wf95xs7_0_30_2024_.jpg'
 
     ]
 
@@ -41,7 +42,7 @@ export default function ProductGalleryDialog() {
                     <Box display={'flex'} flexDirection={'row'}>
                         <Box flex={4}>
                             <Image
-                                src={"https://api-mojosadean.rodiginesia.com/product/PRDCT_IMGS_aip6zip4_0_29_2024_.jpg"}
+                                src={previewImg}
                                 alt="Gambar Produk"
                                 width={0}
                                 height={0}
@@ -55,18 +56,19 @@ export default function ProductGalleryDialog() {
                                 {
                                     Array.from({ length: 2 }).map((_, index, array) => (
                                         <Grid item xs={6} md={3}>
-                                        <Image
-                                            src={images[index]}
-                                            alt="Gambar Produk"
-                                            width={0}
-                                            height={0}
-                                            sizes="100vw"
-                                            style={{ width: '100%', height: 'auto', borderRadius: '15px' }} // optional
-                                        />
-                                    </Grid>
+                                            <Image
+                                                src={images[index]}
+                                                alt="Gambar Produk"
+                                                width={0}
+                                                height={0}
+                                                sizes="100vw"
+                                                style={{ width: '100%', height: 'auto', borderRadius: '15px' }}
+                                                onClick={() => setPreviewImg(images[index])} // optional
+                                            />
+                                        </Grid>
                                     ))
                                 }
-                           
+
                             </Grid>
                         </Box>
                     </Box>
