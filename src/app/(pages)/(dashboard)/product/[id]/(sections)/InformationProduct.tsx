@@ -4,6 +4,7 @@ import { Box, Button, Typography } from '@mui/material'
 import React from 'react'
 import ProductCarousel from '../(components)/ProductCarousel'
 import InformationDetailProduct from '../(components)/InformationDetailProduct'
+import ProductVariantTable from '../(components)/ProductVariantTable'
 
 const InformationProduct = () => {
     return (
@@ -21,6 +22,8 @@ const InformationProduct = () => {
                         <InformationDetailProduct/>
                     </Box>
                 </Box>
+            
+            <ProductVariantTable/>
 
             </BlankCard>
         </>

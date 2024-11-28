@@ -1,6 +1,7 @@
 import { formatRupiah } from '@/utils/extension'
 import { Box, Chip, Table, Typography } from '@mui/material'
 import React from 'react'
+import { ShieldExclamation } from 'react-bootstrap-icons'
 
 const InformationDetailProduct = () => {
   return (
@@ -15,8 +16,8 @@ const InformationDetailProduct = () => {
         <Box>
             <Typography variant='h6' pb={1}>Kategori</Typography>
             <Box display={'flex'} flexDirection={'row'} gap={1}>
-            <Chip label="primary" color="primary" />
-            <Chip label="primary" color="primary" />
+            <Chip label="Baju" color="primary" />
+            <Chip label="wanita" color="primary" />
             </Box>
             
         </Box>
@@ -51,7 +52,8 @@ const InformationDetailProduct = () => {
         <Box py={1}></Box>
         <Box>
             <Typography variant='h6' pb={1}>Asuransi Pengiriman</Typography>
-            <Typography variant='body1'>Opsional Asuransi Pengiriman</Typography>
+            <Typography variant='body1'>
+                Opsional Asuransi Pengiriman</Typography>
         </Box>
     </>
   )
