@@ -7,10 +7,14 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import { IconCircleChevronRight, IconPlus, IconX } from '@tabler/icons-react';
-import { Box, Grid, Typography } from '@mui/material';
+import { Box, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
 import Image from 'next/image';
+import { ClosedCaptionOff } from '@mui/icons-material';
 
 export default function ProductGalleryDialog() {
+    const theme = useTheme();
+    const isTablet = useMediaQuery(theme.breakpoints.down('md'));
+
     const [open, setOpen] = React.useState(false);
     const [previewImg, setPreviewImg] = React.useState('https://api-mojosadean.rodiginesia.com/product/PRDCT_IMGS_9wf95xs7_0_30_2024_.jpg');
 
@@ -37,9 +41,12 @@ export default function ProductGalleryDialog() {
                 fullWidth
                 maxWidth='md'
             >
-                <DialogTitle>Galeri Produk</DialogTitle>
+                <Box display={'flex'} flexDirection={'row'} justifyContent={'space-between'}>
+                <DialogTitle fontSize={20}>Galeri Produk</DialogTitle>
+                <DialogTitle onClick={handleClose} style={{ cursor: 'pointer' }}>&#x2715;</DialogTitle>
+                </Box>
                 <DialogContent>
-                    <Box display={'flex'} flexDirection={'row'}>
+                    <Box display={'flex'} flexDirection={ isTablet ? 'column' : 'row'}>
                         <Box flex={4}>
                             <Image
                                 src={previewImg}
@@ -50,12 +57,12 @@ export default function ProductGalleryDialog() {
                                 style={{ width: '100%', height: 'auto', borderRadius: '15px' }} // optional
                             />
                         </Box>
-                        <Box px={1}></Box>
+                        <Box py={isTablet ? 1 : 0} px={isTablet ? 0 : 1}></Box>
                         <Box flex={6}>
                             <Grid container spacing={2}>
                                 {
                                     Array.from({ length: 2 }).map((_, index, array) => (
-                                        <Grid item xs={6} md={3}>
+                                        <Grid item xs={3} md={3}>
                                             <Image
                                                 src={images[index]}
                                                 alt="Gambar Produk"

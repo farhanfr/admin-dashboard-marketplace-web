@@ -4,10 +4,12 @@ import PageContainer from '@/components/container/PageContainer'
 import React from 'react'
 import InformationProduct from './(sections)/InformationProduct'
 import DescriptionProduct from './(sections)/DescriptionProduct'
-import { Box } from '@mui/material'
+import { Box, useMediaQuery, useTheme } from '@mui/material'
 import HistoryTransactionProduct from './(sections)/HistoryTransactionProduct'
 
 const ProductDetailPage = () => {
+    const theme = useTheme();
+    const isTablet = useMediaQuery(theme.breakpoints.down('md'));
     return (
         <PageContainer title="Detail Produk" description="Detail Produk">
             <InformationProduct />

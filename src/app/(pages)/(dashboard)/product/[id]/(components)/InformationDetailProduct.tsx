@@ -1,13 +1,16 @@
 import { formatRupiah } from '@/utils/extension'
-import { Box, Chip, Table, Typography } from '@mui/material'
+import { Box, Chip, Table, Typography, useMediaQuery, useTheme } from '@mui/material'
 import React from 'react'
 import { ShieldExclamation } from 'react-bootstrap-icons'
 
 const InformationDetailProduct = () => {
+    const theme = useTheme();
+    const isTablet = useMediaQuery(theme.breakpoints.down('md'));
+
   return (
     <>
         <Typography variant='h2'>Baju Kaos Masa Kini 2024</Typography>
-        <Box py={2}></Box>
+        <Box py={isTablet ? 1 : 2}></Box>
         <Box>
             <Typography variant='h6' pb={1}>SKU</Typography>
             <Typography variant='body1'>awdkja092384092</Typography>
